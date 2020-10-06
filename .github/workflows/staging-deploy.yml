@@ -7,7 +7,8 @@ name: Auto Deployment
 on:
   push:
     branches: [ main ]
-
+  release:
+    types: [ published ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,6 +25,6 @@ jobs:
         uses: jasongitmail/fast-webhook@v1.1.4
         with:
           # The webhook URL to send the request to.
-          url: https://shinydeploy.stats4sdtest.online
+          url: https://shinydeploy.stats4sdtest.online/githook
           # The stringified JSON body to be sent, if any.
-          json: '{"secret": "$SHINYDEPLOYSECRET", "repo": "$GITHUB_REPOSITORY"}'
+          json: '{"secret": "$SHINYDEPLOYSECRET", "repo": "$GITHUB_REPOSITORY", "ref": "$GITHUB_REF"}'
