@@ -23,8 +23,12 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: jasongitmail/fast-webhook@6deed6ce6c4f3b7044a27fc272b7a019a6e4c41a
         uses: jasongitmail/fast-webhook@v1.1.4
+        env: 
+          secret: ${{ secrets.SHINYDEPLOYSECRET }}
+          repo: ${{ env.GITHUB_REPOSITORY }}
+          ref: ${{ env.GITHUB_REF }}
         with:
           # The webhook URL to send the request to.
           url: https://shinydeploy.stats4sdtest.online/githook
           # The stringified JSON body to be sent, if any.
-          json: '{"secret": "${{ secrets.SHINYDEPLOYSECRET }}", "repo": "${{ env.GITHUB_REPOSITORY }}", "ref": "${{ env.GITHUB_REF }}"}'
+          json: '{"secret": "$secret", "repo": "$repo", "ref": "$ref"}'
