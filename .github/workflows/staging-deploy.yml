@@ -27,4 +27,4 @@ jobs:
           # The webhook URL to send the request to.
           url: https://shinydeploy.stats4sdtest.online/githook
           # The stringified JSON body to be sent, if any.
-          json: '{"secret": "${{ secrets.SHINYDEPLOYSECRET }}", "repo": "${{ GITHUB_REPOSITORY }}", "ref": "${{ GITHUB_REF }}"}'
+          json: '{"secret": "${{ secrets.SHINYDEPLOYSECRET }}", "repo": "${{ env.GITHUB_REPOSITORY }}", "ref": "${{ env.GITHUB_REF }}"}'
