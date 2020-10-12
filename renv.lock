@@ -313,14 +313,6 @@
     "koboloadeR": {
       "Package": "koboloadeR",
       "Version": "0.1.2",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "mrdwab",
-      "RemoteRepo": "koboloadeR",
-      "RemoteRef": "master",
-      "RemoteSha": "1005087713439cd9e6fc39e4221c28e7978587e5",
-      "Hash": "2ecb7d24bc69c942bb2cef7179aceae8"
     },
     "labeling": {
       "Package": "labeling",
