@@ -23,7 +23,7 @@ neg<-function(x){-1*x}
 ui <- fluidPage(
    
    # Application title
-   titlePanel("Asking Better Questions, Edited For Deployment Testing, With Yet More Edits"),
+   titlePanel("Asking Better Questions"),
    
    
    # Sidebar with a slider input for number of bins 
