@@ -25,6 +25,6 @@ jobs:
         uses: jasongitmail/fast-webhook@v1.1.4
         with:
           # The webhook URL to send the request to.
-          url: https://shinydeploy.stats4sdtest.online/githook
+          url: https://shiny-admin.stats4sd.org/githook
           # The stringified JSON body to be sent, if any.
           json: '{"secret": "${{ secrets.SHINYDEPLOYSECRET }}", "repo": "${{ github.repository }}", "ref": "${{ github.ref }}"}'
